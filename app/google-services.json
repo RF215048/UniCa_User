@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "406960526615",
+    "firebase_url": "https://unica-2479a.firebaseio.com",
+    "project_id": "unica-2479a",
+    "storage_bucket": "unica-2479a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406960526615:android:fd601ef2f791b924",
+        "android_client_info": {
+          "package_name": "com.example.enpit_p3.unica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406960526615-3rtuv0ovmvgpehn61a4riob1ed0hkh4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzlWHRU-TpDIgFbxMivLBWx6nR0ttbNLY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406960526615:android:3e349c82b11fdc46",
+        "android_client_info": {
+          "package_name": "com.example.tatsuya.uni_ca_user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406960526615-3rtuv0ovmvgpehn61a4riob1ed0hkh4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzlWHRU-TpDIgFbxMivLBWx6nR0ttbNLY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
