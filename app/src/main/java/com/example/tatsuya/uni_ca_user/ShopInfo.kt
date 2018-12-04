@@ -23,5 +23,8 @@ class ShopInfo : AppCompatActivity() {
         button_Settings.setOnClickListener { view ->
             startActivity<Settings>()
         }
+        button.setOnClickListener { view ->
+            startActivity<ServiceTicket>()
+        }
     }
 }

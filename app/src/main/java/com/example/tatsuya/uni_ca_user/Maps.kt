@@ -3,9 +3,6 @@ package com.example.tatsuya.uni_ca_user
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import com.example.tatsuya.uni_ca_user.R.id.button_MapSearch
-import com.example.tatsuya.uni_ca_user.R.id.button_ShopSearch
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -16,7 +13,6 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.CameraPosition
 import kotlinx.android.synthetic.main.activity_maps.*
 import org.jetbrains.anko.startActivity
-
 
 class Maps : AppCompatActivity(), OnMapReadyCallback {
 
@@ -30,7 +26,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-        
+
         //店舗検索への画面遷移の処理
         button_ShopSearch.setOnClickListener { view ->
             startActivity<ShopSearch>()
@@ -44,16 +40,6 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
             startActivity<Settings>()
         }
     }
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
 
     //初期化されて利用できたときに呼ばれる
     @SuppressLint("MissingPermission")

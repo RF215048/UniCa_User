@@ -54,4 +54,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="125dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 </android.support.constraint.ConstraintLayout>
