@@ -43,20 +43,17 @@
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
-
-        <activity
-                android:name=".MapsActivity"
-                android:label="@string/title_activity_maps">
-        </activity>
         <activity android:name=".ShopInfo">
         </activity>
         <activity android:name=".ShopSearch">
         </activity>
         <activity android:name=".ServiceTicket">
         </activity>
-        <activity android:name=".QRcodeSending">
-        </activity>
         <activity android:name=".QrcodeSending">
+        </activity>
+        <activity
+                android:name=".Maps"
+                android:label="@string/title_activity_maps">
         </activity>
     </application>
 

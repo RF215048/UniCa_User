@@ -9,41 +9,50 @@
 
     <Button
             android:text="@string/mapSearchText"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:id="@+id/button_MapSearch" app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:id="@+id/button_MapSearch"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="24sp" app:layout_constraintEnd_toStartOf="@+id/button_ShopSearch"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_ShopSearch"
             android:background="@color/colorPrimary"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+
     <Button
             android:text="@string/searchText"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:id="@+id/button_ShopSearch"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/button_MapSearch"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/button_ShopInfo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_ShopInfo"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+
     <Button
             android:text="@string/shopInfoText"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:id="@+id/button_ShopInfo"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button_ShopSearch" android:background="@color/colorPrimary"
+            app:layout_constraintStart_toEndOf="@+id/button_ShopSearch"
+            android:background="@color/colorPrimary"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"
             app:layout_constraintEnd_toStartOf="@+id/button_Settings"/>
+
     <Button
             android:text="@string/settingsText"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:id="@+id/button_Settings"
             android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/button_ShopInfo" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toEndOf="@+id/button_ShopInfo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/darker_gray"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
     <TextView
             android:text="@string/settingsText"

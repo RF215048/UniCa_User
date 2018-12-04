@@ -9,44 +9,52 @@
 
     <Button
             android:text="@string/mapSearchText"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:id="@+id/button_MapSearch"
             android:textSize="24sp"
             android:background="@color/colorPrimary"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_ShopSearch"
-    />
+            />
+
     <Button
             android:text="@string/searchText"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:id="@+id/button_ShopSearch"
             android:textSize="24sp"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
             app:layout_constraintStart_toEndOf="@+id/button_MapSearch"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/button_ShopInfo"
-    />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_ShopInfo"
+            />
+
     <Button
             android:text="@string/shopInfoText"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:id="@+id/button_ShopInfo"
             android:textSize="24sp"
             android:background="@color/colorPrimary"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"
             app:layout_constraintStart_toEndOf="@+id/button_ShopSearch"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/button_Settings"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_Settings"/>
+
     <Button
             android:text="@string/settingsText"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:id="@+id/button_Settings"
             android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/button_ShopInfo" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:background="@color/colorPrimaryDark"
+            app:layout_constraintStart_toEndOf="@+id/button_ShopInfo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/colorPrimaryDark"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
     <TextView
             android:text="@string/shopNameText"
@@ -66,14 +74,18 @@
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
             android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/textView16"/>
+
     <TextView
             android:text="@string/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView16" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/textView16"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/imageView"
-            android:textSize="30sp" android:layout_marginBottom="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:textSize="30sp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
     <LinearLayout
@@ -109,44 +121,60 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
+
     <Button
             android:text="@string/qrcodeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/button2"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            android:textSize="24sp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="140dp" android:background="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="183dp"
+            android:background="@color/colorAccent"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+
     <TextView
             android:text="@string/service1"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView25" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/textView25"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            android:layout_marginTop="76dp" app:layout_constraintTop_toBottomOf="@+id/textView16"
-            android:textSize="24sp" android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:layout_marginBottom="32dp" app:layout_constraintBottom_toTopOf="@+id/textView26"/>
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            android:textSize="24sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView26"
+            app:layout_constraintVertical_chainStyle="spread_inside"/>
+
     <TextView
             android:text="@string/service2"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView26"
-            android:textSize="24sp" android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="24sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/textView25"
-            android:layout_marginBottom="32dp" app:layout_constraintBottom_toTopOf="@+id/textView27"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView25"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView27"/>
+
     <TextView
             android:text="@string/service3"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView27"
-            android:textSize="24sp" android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="24sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/textView26"
-            android:layout_marginBottom="84dp" app:layout_constraintBottom_toTopOf="@+id/button2"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/button2"/>
     <TextView
             android:text="@string/caution1Text"
             android:layout_width="wrap_content"

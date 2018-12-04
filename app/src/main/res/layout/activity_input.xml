@@ -8,7 +8,7 @@
         tools:context=".Input">
 
     <Button
-            android:text="@string/backText"
+            android:text="@string/textBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_Back" android:textSize="40sp" app:layout_constraintStart_toStartOf="parent"
@@ -16,7 +16,7 @@
             app:layout_constraintBottom_toBottomOf="parent" android:background="@color/colorPrimary"
             android:textColor="@android:color/background_light"/>
     <Button
-            android:text="@string/nextText"
+            android:text="@string/textNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_Next" android:textSize="40sp"
@@ -32,18 +32,18 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="32dp" android:layout_marginStart="32dp" android:id="@+id/radioGroup">
         <RadioButton
-                android:text="@string/manText"
+                android:text="@string/textMan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/radioButton_Man" android:layout_weight="1"
                 android:textSize="30sp"/>
         <RadioButton
-                android:text="@string/womanText"
+                android:text="@string/textWoman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/radioButton_Woman" android:layout_weight="1"
                 android:textSize="30sp"/>
     </RadioGroup>
     <TextView
-            android:text="@string/inputText"
+            android:text="@string/textInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView6" app:layout_constraintTop_toTopOf="parent"
@@ -51,7 +51,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="32dp" android:textSize="35sp"/>
     <TextView
-            android:text="@string/userIDText"
+            android:text="@string/textUserID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView7" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
@@ -65,9 +65,9 @@
             android:id="@+id/editText_UserID" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView7" android:layout_marginStart="32dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
-            android:hint="@string/userIDHintText" android:textSize="30sp"/>
+            android:hint="@string/textUserIDHint" android:textSize="30sp"/>
     <TextView
-            android:text="@string/passwordText"
+            android:text="@string/textPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView8" android:layout_marginTop="24dp"
@@ -82,9 +82,9 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
             android:layout_marginStart="32dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView8" android:textSize="30sp"
-            android:hint="@string/passwordHintText"/>
+            android:hint="@string/textPasswordHint"/>
     <TextView
-            android:text="@string/mailText"
+            android:text="@string/textMail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView9" android:layout_marginTop="24dp"
@@ -99,9 +99,9 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
             android:layout_marginStart="32dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView9" android:textSize="30sp"
-            android:hint="@string/sampleMailText"/>
+            android:hint="@string/textSampleMail"/>
     <TextView
-            android:text="@string/birthdayText"
+            android:text="@string/textBirthday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView10" android:layout_marginTop="24dp"
@@ -115,9 +115,9 @@
             android:id="@+id/editText_Birthday" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView10" android:layout_marginStart="32dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
-            android:hint="@string/birthdayHintText" android:textSize="30sp"/>
+            android:hint="@string/textBirthdayHint" android:textSize="30sp"/>
     <TextView
-            android:text="@string/genderText"
+            android:text="@string/textGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView11" android:layout_marginTop="24dp"

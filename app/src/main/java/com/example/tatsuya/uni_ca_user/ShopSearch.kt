@@ -13,7 +13,7 @@ class ShopSearch : AppCompatActivity() {
 
         //マップ検索への画面遷移の処理
         button_MapSearch.setOnClickListener { view ->
-            startActivity<MapsActivity>()
+            startActivity<Maps>()
         }
         //店舗情報への画面遷移の処理
         button_ShopInfo.setOnClickListener { view ->

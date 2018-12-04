@@ -1,37 +1,37 @@
 <resources>
     <string name="app_name">Uni-Ca_User</string>
-    <string name="titleText2">Uni-Ca</string>
-    <string name="titleText1">サービス券電子化システム</string>
-    <string name="loginText">ログイン</string>
-    <string name="userIDText">ユーザーID</string>
-    <string name="passwordText">パスワード</string>
-    <string name="userIDHintText">ex)rikao21</string>
-    <string name="loginButtonText">ログインする</string>
-    <string name="newAccountText">新規登録はこちら</string>
-    <string name="personalInformationText">個人情報の取り扱いについて</string>
-    <string name="notAcceptText">同意しません</string>
-    <string name="acceptText">同意します</string>
-    <string name="backText">戻る</string>
-    <string name="nextText">次へ</string>
-    <string name="cautionText">"個人情報等の取り扱いに関して 株式会社○○○○は、お客様の個人情報等の取扱いについて、下記のとおりお約束いたします。 記 １．\t個人情報の利用目的について
+    <string name="textTitle2">Uni-Ca</string>
+    <string name="textTitle1">サービス券電子化システム</string>
+    <string name="textLogin">ログイン</string>
+    <string name="textUserID">ユーザーID</string>
+    <string name="textPassword">パスワード</string>
+    <string name="textUserIDHint">ex)rikao21</string>
+    <string name="textLoginButton">ログインする</string>
+    <string name="textNewAccount">新規登録はこちら</string>
+    <string name="textPersonalInformation">個人情報の取り扱いについて</string>
+    <string name="textNotAccept">同意しません</string>
+    <string name="textAccept">同意します</string>
+    <string name="textBack">戻る</string>
+    <string name="textNext">次へ</string>
+    <string name="textCaution">"個人情報等の取り扱いに関して 株式会社○○○○は、お客様の個人情報等の取扱いについて、下記のとおりお約束いたします。 記 １．\t個人情報の利用目的について
         株式会社○○○○は、お客様からご提示いただいた名前、住所、電話番号、性別その他のお客様個人に関わる情報（以下、「個人情報等」といいます）を、お客様へ適した商品やサービス、及び会報誌・ダイレクトメール等による各種情報のご提供のために利用させていただき、お客様の承諾なく、他の目的には利用いたしません。
         ２．個人情報の第三者提供について 株式会社○○○○でお預かりした個人情報等を、以下のいずれかに該当する場合を除き、第三者へ提供、取り扱いを委託することはありません。 ①お客様の事前の承諾を得た場合
         ②業務委託会社に対して、お客様に明示した利用目的の達成のために必要な範囲で個人情報等の取扱いを委託する場合 ③法令の定めにより提供を求められた場合 ３．個人情報の開示等について
         株式会社○○○○は、個人情報等の開示、変更、削除の求めがあった場合には、お客様ご本人であることをご確認させていただいたうえで、すみやかに対応いたします。 以上 "
     </string>
-    <string name="inputText">個人情報の入力</string>
-    <string name="passwordHintText">********</string>
-    <string name="mailText">メールアドレス</string>
-    <string name="sampleMailText">ex)sample@ed.socu.ac.jp</string>
-    <string name="birthdayText">生年月日（2000年1月1日→2000/01/01）</string>
-    <string name="birthdayHintText">ex)2000/01/01</string>
-    <string name="genderText">性別</string>
-    <string name="manText">男性</string>
-    <string name="womanText">女性</string>
-    <string name="confirmationText">確認画面</string>
-    <string name="birthdayText_confirmation">生年月日</string>
-    <string name="confirmationText2">上記の内容でお間違いなければ送信ボタンを押してください</string>
-    <string name="sendText">送信</string>
+    <string name="textInput">個人情報の入力</string>
+    <string name="textPasswordHint">********</string>
+    <string name="textMail">メールアドレス</string>
+    <string name="textSampleMail">ex)sample@ed.socu.ac.jp</string>
+    <string name="textBirthday">生年月日（2000年1月1日→2000/01/01）</string>
+    <string name="textBirthdayHint">ex)2000/01/01</string>
+    <string name="textGender">性別</string>
+    <string name="textMan">男性</string>
+    <string name="textWoman">女性</string>
+    <string name="textConfirmation">確認画面</string>
+    <string name="textBirthday_confirmation">生年月日</string>
+    <string name="textConfirmation2">上記の内容でお間違いなければ送信ボタンを押してください</string>
+    <string name="textSend">送信</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->
@@ -126,4 +126,6 @@
     <string name="service3">ドリンク50円引き</string>
     <string name="caution1Text">サービスは入店につき一度だけ使用できます</string>
     <string name="caution3">※入店ごとに一回限り</string>
+    <string name="sampleText">sample1</string>
+    <string name="sampleText2">sample2</string>
 </resources>
