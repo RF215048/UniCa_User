@@ -2,6 +2,7 @@ package com.example.tatsuya.uni_ca_user
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import io.realm.Realm
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
@@ -15,30 +16,27 @@ class Confirmation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirmation)
-        realm = Realm.getDefaultInstance()
 
-        val maxId = realm.where<PersonalInfo>().max("id")
-        val nextId = (maxId?.toLong() ?: 0L) + 1
-        val personalInfo = realm.createObject<PersonalInfo>(nextId)
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        val userID = pref.getString("USER_ID", "")
+        val password = pref.getString("PASSWORD", "")
+        val mailAdress = pref.getString("MAIL_ADRESS", "")
+        val birthday = pref.getString("BIRTHDAY", "")
+        val gender = pref.getString("GENDER", "")
 
-        textView_UseID.text = personalInfo.userID
-        textView_Password.text = personalInfo.password
-        textView_Email.text = personalInfo.eMail
-        textView_Birthday.text = personalInfo.birthday.toString()
-        textView_Gender.text = personalInfo.gender
+        textView_UseID.text = userID
+        textView_Password.text = password
+        textView_Email.text = mailAdress
+        textView_Birthday.text = birthday
+        textView_Gender.text = gender
 
         //送信ボタンを押したときの処理
         button_Send.setOnClickListener { view ->
-            startActivity<Settings>()
+            startActivity<ShopInfo>()
         }
         //戻るボタンを押したときの処理
         button_Back.setOnClickListener { view ->
             startActivity<Input>()
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        realm.close()
     }
 }

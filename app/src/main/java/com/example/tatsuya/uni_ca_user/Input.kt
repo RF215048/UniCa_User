@@ -2,13 +2,16 @@ package com.example.tatsuya.uni_ca_user
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import com.example.tatsuya.uni_ca_user.R.id.text
 import io.realm.Realm
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_input.*
 import org.jetbrains.anko.startActivity
+import org.w3c.dom.Text
 import java.lang.IllegalArgumentException
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -16,66 +19,40 @@ import java.util.*
 import java.util.regex.Pattern
 
 class Input : AppCompatActivity() {
-    private lateinit var realm: Realm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input)
-        realm = Realm.getDefaultInstance()
-        var currentId = ""
+
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        val userID = pref.getString("USER_ID","")
+        val password = pref.getString("PASSWORD","")
+        val mailAdress = pref.getString("MAIL_ADRESS","")
+        val birthday = pref.getString("BIRTHDAY","")
+        val gender = pref.getString("GENDER","")
 
         //次へボタンを押したときの処理（各記入要項を満たせば次の画面へ）
-        button_Next.setOnClickListener {
-            realm.executeTransaction {
-                val maxId = realm.where<PersonalInfo>().max("id")
-                val nextId = (maxId?.toLong() ?: 0L) + 1
-                val personalInfo = realm.createObject<PersonalInfo>(nextId)
-
-                personalInfo.userID = editText_UserID.text.toString()
-                personalInfo.password = editText_Password.text.toString()
-                personalInfo.eMail = editText_Email.text.toString()
-
-                editText_Birthday.text.toString().toDate("yyyy/MM/dd")?.let {
-                    personalInfo.birthday = it
-                }
-
-                personalInfo.gender = currentId
-            }
-        }
-        //性別を選択したときの処理
-        radioGroup.setOnCheckedChangeListener { group, checkedId ->
-            currentId = findViewById<RadioButton>(checkedId).text as String
-        }
-
-        button_Next.setOnClickListener { view ->
+        button_Next.setOnClickListener { View ->
             startActivity<Confirmation>()
+            saveData()
         }
         //戻るボタンを押したときの処理
         button_Back.setOnClickListener { view ->
             startActivity<Accept>()
         }
-    }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        realm.close()
-    }
-
-
-    fun String.toDate(pattern: String = "yyyy/MM/dd HH:mm"): Date? {
-        val sdFormat = try {
-            SimpleDateFormat(pattern)
-        } catch (e: IllegalArgumentException) {
-            null
+        radioGroup.setOnCheckedChangeListener { group, checkedId ->
+            genderText.text = findViewById<RadioButton>(checkedId).text
         }
-        val date = sdFormat?.let {
-            try {
-                it.parse(this)
-            } catch (e: ParseException) {
-                null
-            }
-        }
-        return date
     }
-
+    private fun saveData() {
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        val editor = pref.edit()
+        editor.putString("USER_ID", editText_UserID.text.toString())
+            .putString("PASSWORD", editText_Password.text.toString())
+            .putString("MAIL_ADRESS", editText_Email.text.toString())
+            .putString("BIRTHDAY", editText_Birthday.text.toString())
+            .putString("GENDER", genderText.text.toString())
+            .apply()
+    }
 }
