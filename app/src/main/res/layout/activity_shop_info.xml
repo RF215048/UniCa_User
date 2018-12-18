@@ -55,14 +55,180 @@
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
-    <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="125dp"
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_Banner"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button_ShopInfo"
+            android:id="@+id/scrollView3"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <Button
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/button_ticket1"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_name1"
+                        android:background="@drawable/ramen_ikkyu01"
+                        app:layout_constraintEnd_toStartOf="@+id/button_ticket2"
+                        android:layout_marginTop="50dp"/>
+
+                <Button
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/button_ticket2"
+                        android:textSize="14sp"
+                        android:background="@drawable/ramen_sankyuu01"
+                        app:layout_constraintStart_toEndOf="@+id/button_ticket1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="50dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_name2"/>
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="@string/text_ikkyu"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_name1"
+                        app:layout_constraintTop_toBottomOf="@+id/button_ticket1"
+                        app:layout_constraintEnd_toEndOf="@+id/button_ticket1"
+                        app:layout_constraintStart_toStartOf="@+id/button_ticket1"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorAccent"/>
+
+                <TextView
+                        android:text="@string/text_sankyu"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_name2"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintEnd_toEndOf="@+id/button_ticket2"
+                        app:layout_constraintStart_toStartOf="@+id/button_ticket2"
+                        app:layout_constraintTop_toBottomOf="@+id/button_ticket2"/>
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <Button
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/button_ticket3"
+                        android:textSize="14sp"
+                        android:background="@drawable/ramen_oosakaya01"
+                        android:layout_marginTop="50dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_name1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_name3"
+                        app:layout_constraintEnd_toStartOf="@+id/button_ticket4"
+                        />
+
+                <Button
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/button_ticket4"
+                        android:textSize="14sp"
+                        android:background="@drawable/ramen_sanpei01"
+                        android:layout_marginTop="50dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_name2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/button_ticket3"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_name4"/>
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="@string/text_oosakaya"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_name3"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintStart_toStartOf="@+id/button_ticket3"
+                        app:layout_constraintEnd_toEndOf="@+id/button_ticket3"
+                        app:layout_constraintTop_toBottomOf="@+id/button_ticket3"
+                        android:layout_width="200dp"/>
+
+                <TextView
+                        android:text="@string/text_sanpei"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_name4"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintEnd_toEndOf="@+id/button_ticket4"
+                        app:layout_constraintStart_toStartOf="@+id/button_ticket4"
+                        app:layout_constraintTop_toBottomOf="@+id/button_ticket4"/>
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <Button
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/button_ticket5"
+                        android:textSize="14sp"
+                        android:background="@drawable/ramen_syuuchan01"
+                        android:layout_marginTop="50dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_name3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button_ticket5"
+                        />
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="@string/text_shuuchan"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_name5"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorAccent"
+                        app:layout_constraintTop_toBottomOf="@+id/button_ticket5"
+                        app:layout_constraintStart_toStartOf="@+id/button_ticket5"
+                        app:layout_constraintEnd_toEndOf="@+id/button_ticket5"/>
+            </TableRow>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:id="@+id/button_Banner"
+            android:background="@drawable/ramen_ikkyu01_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
+
 </android.support.constraint.ConstraintLayout>

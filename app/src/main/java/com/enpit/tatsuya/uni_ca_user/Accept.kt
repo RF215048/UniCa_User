@@ -1,12 +1,9 @@
-package com.example.tatsuya.uni_ca_user
+package com.enpit.tatsuya.uni_ca_user
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.RadioButton
 import kotlinx.android.synthetic.main.activity_accept.*
 import org.jetbrains.anko.startActivity
-import com.example.tatsuya.uni_ca_user.R.id.radioGroup
-
 
 
 class Accept : AppCompatActivity() {

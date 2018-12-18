@@ -1,4 +1,4 @@
-package com.example.tatsuya.uni_ca_user
+package com.enpit.tatsuya.uni_ca_user
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

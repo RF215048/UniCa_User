@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:406960526615:android:fd601ef2f791b924",
         "android_client_info": {
-          "package_name": "com.example.enpit_p3.unica"
+          "package_name": "com.enpit.enpit_p3.unica"
         }
       },
       "oauth_client": [
@@ -41,7 +41,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:406960526615:android:3e349c82b11fdc46",
         "android_client_info": {
-          "package_name": "com.example.tatsuya.uni_ca_user"
+          "package_name": "com.enpit.tatsuya.uni_ca_user"
         }
       },
       "oauth_client": [

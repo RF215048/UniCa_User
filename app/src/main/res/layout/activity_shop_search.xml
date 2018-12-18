@@ -11,14 +11,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
             android:id="@+id/editText"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="52dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            android:hint="@string/text_search"
+            android:textSize="30sp"/>
 
     <Button
             android:text="@string/mapSearchText"
@@ -67,4 +67,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_search"
+            android:id="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="@+id/editText"
+            app:layout_constraintBottom_toBottomOf="@+id/editText"
+            />
 </android.support.constraint.ConstraintLayout>

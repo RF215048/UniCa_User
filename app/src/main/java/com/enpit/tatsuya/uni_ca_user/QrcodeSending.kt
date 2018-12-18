@@ -1,7 +1,8 @@
-package com.example.tatsuya.uni_ca_user
+package com.enpit.tatsuya.uni_ca_user
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.AndroidRuntimeException
 import com.google.zxing.WriterException
 import com.google.zxing.BarcodeFormat
@@ -15,6 +16,13 @@ class QrcodeSending : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qrcode_sending)
+
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        val shopName     = pref.getString("SHOP_NAME","")
+        val serviceName     = pref.getString("SERVICE_NAME","")
+
+        shop_Name.text = shopName
+        servise_Name.text = serviceName
 
         //マップ検索への画面遷移の処理
         button_MapSearch.setOnClickListener { view ->
@@ -33,7 +41,7 @@ class QrcodeSending : AppCompatActivity() {
             startActivity<Settings>()
         }
 
-        val data = "test" //QRコード化する文字列
+        val data = shopName.toString() //QRコード化する文字列
         val size = 500 //QRコード画像の大きさを指定(pixel)
 
         try {

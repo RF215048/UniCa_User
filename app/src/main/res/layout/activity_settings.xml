@@ -54,31 +54,49 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@android:color/darker_gray"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+
     <TextView
             android:text="@string/settingsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView24"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="32dp" android:textSize="35sp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"
+            android:textSize="35sp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_ChangeInfo"/>
+
     <Button
             android:text="@string/changeInfoText"
             android:layout_width="400dp"
             android:layout_height="80dp"
             android:id="@+id/button_ChangeInfo"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/textView24"
-            android:textSize="30sp" android:background="@color/colorPrimary"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView24"
+            android:textSize="30sp"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_Help"/>
+
     <Button
             android:text="@string/helpText"
             android:layout_width="400dp"
             android:layout_height="80dp"
             android:id="@+id/button_Help"
-            android:textSize="30sp" app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/button_ChangeInfo"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_ChangeInfo"
             android:background="@color/colorPrimaryDark"
-            android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_Inquiry"/>
+
     <Button
             android:text="@string/inquiryText"
             android:layout_width="400dp"
@@ -87,8 +105,12 @@
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/button_Help"
-            android:background="@color/colorPrimary"/>
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_Help"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_Deleate"/>
+
     <Button
             android:text="@string/deleateInfoText"
             android:layout_width="400dp"
@@ -99,7 +121,11 @@
             android:textColor="@color/common_google_signin_btn_text_dark_default"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/button_Inquiry"/>
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_Inquiry"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_Logout"/>
+
     <Button
             android:text="@string/logoutText"
             android:layout_width="400dp"
@@ -108,6 +134,9 @@
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/button_Deleate"
-            android:background="@color/colorPrimary"/>
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_Deleate"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/button_ShopInfo"
+            android:layout_marginBottom="16dp"/>
 </android.support.constraint.ConstraintLayout>

@@ -56,24 +56,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+
     <TextView
-            android:text="@string/shopNameText"
+            android:text="@string/text_ikkyu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView14" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent" android:textSize="36sp" android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView" android:textColor="@color/colorPrimaryDark"/>
-    <ImageView
-            android:layout_width="0dp"
-            android:layout_height="200dp" app:srcCompat="@drawable/ic_launcher_background"
-            android:id="@+id/imageView"
+            android:id="@+id/shop_Name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView14"
-            android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/textView16"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView_shopImage"
+            android:textColor="@color/colorPrimaryDark"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/ramen_ikkyu01"
+            android:id="@+id/imageView_shopImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shop_Name"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView16"/>
 
     <TextView
             android:text="@string/text1"
@@ -82,105 +88,116 @@
             android:id="@+id/textView16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_shopImage"
             android:textSize="30sp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
+
+    <Button
+            android:text="@string/service1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/qrcode_button"
+            android:textSize="24sp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/qrcode_button2"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            />
+
+    <Button
+            android:text="@string/service2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/qrcode_button2"
+            android:textSize="24sp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/qrcode_button"
+            app:layout_constraintStart_toStartOf="@+id/qrcode_button"
+            app:layout_constraintEnd_toEndOf="@+id/qrcode_button"
+            app:layout_constraintBottom_toTopOf="@+id/qrcode_button3"/>
+
+    <Button
+            android:text="@string/service3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/qrcode_button3"
+            android:textSize="24sp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            app:layout_constraintStart_toStartOf="@+id/qrcode_button2"
+            app:layout_constraintEnd_toEndOf="@+id/qrcode_button2"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/qrcode_button2"
+            app:layout_constraintBottom_toTopOf="@+id/textView28"
+            android:layout_marginBottom="16dp"/>
+
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="279dp"
-            android:layout_height="235dp" android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="200dp"
+            android:layout_height="200dp"
             android:id="@+id/linearLayout"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="300dp"
-            android:layout_marginStart="300dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView16">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:layout_constraintBottom_toTopOf="@+id/textView28"
+            app:layout_constraintStart_toEndOf="@+id/qrcode_button"
+            >
+
         <TextView
                 android:text="@string/text2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView18" android:textSize="24sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView18"
+                android:textSize="24sp"
                 android:textColor="@color/colorPrimaryDark"/>
+
         <TextView
-                android:text="@string/pickUptext"
+                android:text="@string/text_ikkyu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView20" android:textSize="30sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:textSize="30sp"
                 android:textColor="@color/colorAccent"/>
+
         <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="150dp">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                          android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
                 <TextView
                         android:text="@string/explainSampleText"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/textView22" android:textSize="18sp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView22"
+                        android:textSize="18sp"
                         android:textColor="@color/common_google_signin_btn_text_dark_focused"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
-    <Button
-            android:text="@string/qrcodeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/qrcode_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="183dp"
-            android:background="@color/colorAccent"
-            android:textColor="@color/common_google_signin_btn_text_dark_default"/>
-
-    <TextView
-            android:text="@string/service1"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView25"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView16"
-            android:textSize="24sp"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView26"
-            app:layout_constraintVertical_chainStyle="spread_inside"/>
-
-    <TextView
-            android:text="@string/service2"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView26"
-            android:textSize="24sp"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            app:layout_constraintTop_toBottomOf="@+id/textView25"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView27"/>
-
-    <TextView
-            android:text="@string/service3"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView27"
-            android:textSize="24sp"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/qrcode_button"/>
     <TextView
             android:text="@string/caution1Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView28"
-            app:layout_constraintStart_toEndOf="@+id/qrcode_button" app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintBottom_toTopOf="@+id/button_ShopInfo" android:textSize="14sp"/>
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@+id/qrcode_button3"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_ShopInfo"/>
 </android.support.constraint.ConstraintLayout>
