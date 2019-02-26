@@ -134,4 +134,15 @@
     <string name="text_sanpei">味の三平</string>
     <string name="text_shuuchan">秀ちゃんラーメン</string>
     <string name="textPersonalInformation">プライバシーポリシー</string>
+    <string name="textShopName">店名</string>
+    <string name="text_caution">※ラーメンの写真は宇部市が公開するオープンデータを使用しています。</string>
+    <string name="text_Demo">※デモ版アプリ</string>
+    <string name="text_Info">★お知らせ★</string>
+    <string name="text_Detail">詳細説明</string>
+    <string name="text_caution3">※お店にある端末にかざしてください</string>
+    <string name="textStanpRally">スタンプラリー</string>
+    <string name="textQRcodeReader">QRコードリーダーを起動する</string>
+    <string name="textExplainStamp">スタンプが3つ集まるとご当地特産品をプレゼント！</string>
+    <string name="textDemo">第4回宇部オープンデータコンテストデモ用アプリ</string>
+    <string name="text_demo">デモ用アプリ</string>
 </resources>

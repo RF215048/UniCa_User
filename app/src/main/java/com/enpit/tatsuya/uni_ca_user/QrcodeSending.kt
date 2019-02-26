@@ -41,7 +41,7 @@ class QrcodeSending : AppCompatActivity() {
             startActivity<Settings>()
         }
 
-        val data = shopName.toString() //QRコード化する文字列
+        val data = serviceName.toString() //QRコード化する文字列
         val size = 500 //QRコード画像の大きさを指定(pixel)
 
         try {

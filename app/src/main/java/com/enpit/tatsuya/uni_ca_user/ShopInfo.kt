@@ -4,6 +4,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.preference.PreferenceManager
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_shop_info.*
 import org.jetbrains.anko.browse
 import org.jetbrains.anko.startActivity
@@ -12,12 +16,11 @@ import kotlin.concurrent.timer
 class ShopInfo : AppCompatActivity() {
 
     private val resources = listOf(
-        R.drawable.ramen_ikkyu01_banner,
-        R.drawable.ramen_oosakaya01_banner,
-        R.drawable.ramen_sankyuu01_banner,
-        R.drawable.ramen_sanpei01_banner,
-        R.drawable.ramen_syuuchan01_banner
+        R.drawable.b20190126_1,
+        R.drawable.b20190126_2,
+        R.drawable.b20190126_3
     )
+
 
     private var position = 0
     private var handler = Handler()
@@ -39,12 +42,22 @@ class ShopInfo : AppCompatActivity() {
             }
         }
         button_Banner.setOnClickListener { view ->
-            if(position == 0){ browse("http://odcs.bodik.jp/352021/wp-content/uploads/sites/8/2016/08/ramen_uberamendon1.jpg") }
-            if(position == 1){ browse("http://odcs.bodik.jp/352021/wp-content/uploads/sites/8/2016/08/ramen_oosakaya01.jpg") }
-            if(position == 2){ browse("http://odcs.bodik.jp/352021/wp-content/uploads/sites/8/2016/08/ramen_sankyuu01.jpg") }
-            if(position == 3){ browse("http://odcs.bodik.jp/352021/wp-content/uploads/sites/8/2016/08/ramen_sanpei01.jpg") }
-            if(position == 4){ browse("http://odcs.bodik.jp/352021/wp-content/uploads/sites/8/2016/08/ramen_syuuchan01.jpg") }
+            if(position == 0){ browse("https://www.google.co.jp/") }
+            if(position == 1){ browse("https://www.google.co.jp/") }
+            if(position == 2){ browse("https://www.google.co.jp/") }
         }
+
+        //追加した店名
+        val database = FirebaseDatabase.getInstance().getReference("shopname")
+        database.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot){
+                val shopname = snapshot.value.toString()
+                textView_name.text = shopname
+            }
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+        })
 
         //マップ検索への画面遷移の処理
         button_MapSearch.setOnClickListener { view ->
@@ -61,7 +74,6 @@ class ShopInfo : AppCompatActivity() {
 
         //チケット1をタップしたら店の画像と店舗名を記憶する
         button_ticket1.setOnClickListener { view ->
-            //val pref = PreferenceManager.getDefaultSharedPreferences(this)
             val editor = pref.edit()
             editor
                 //.putString("SHOP_IMAGE", button_ticket1.text.toString())
@@ -72,7 +84,6 @@ class ShopInfo : AppCompatActivity() {
         }
         //チケット2をタップしたら店の画像と店舗名を記憶する
         button_ticket2.setOnClickListener { view ->
-            //val pref = PreferenceManager.getDefaultSharedPreferences(this)
             val editor = pref.edit()
             editor
                 //.putString("SHOP_IMAGE", button_ticket2.text.toString())
@@ -80,6 +91,20 @@ class ShopInfo : AppCompatActivity() {
                 .putInt("SHOP_NUM", 2)
                 .apply()
             startActivity<ServiceTicket>()
+        }
+        //チケット3をタップしたら店の画像と店舗名を記憶する
+        button_ticket.setOnClickListener { view ->
+            val editor = pref.edit()
+            editor
+                //.putString("SHOP_IMAGE", button_ticket2.text.toString())
+                .putString("SHOP_NAME", textView_name.text.toString())
+                .putInt("SHOP_NUM", 3)
+                .apply()
+            startActivity<ServiceTicket>()
+        }
+
+        button_stampRally.setOnClickListener { view ->
+            startActivity<StampRally>()
         }
     }
 
